@@ -1,0 +1,43 @@
+<div class="container mt-4">
+
+  <div class="card p-4 shadow">
+
+    <h2 class="mb-3">
+      Resumen de Reserva
+    </h2>
+
+    <div *ngIf="reserva$ | async as reserva">
+
+      <p>
+        <strong>Responsable:</strong>
+        {{ reserva.responsable }}
+      </p>
+
+      <p>
+        <strong>Fecha:</strong>
+        {{ reserva.fecha }}
+      </p>
+
+      <p>
+        <strong>Hora:</strong>
+        {{ reserva.hora }}
+      </p>
+
+      <p>
+        <strong>Carrera:</strong>
+        {{ reserva.carrera }}
+      </p>
+
+    </div>
+
+    <div *ngIf="!(reserva$ | async)">
+
+      <p>
+        No existe una reserva registrada.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>

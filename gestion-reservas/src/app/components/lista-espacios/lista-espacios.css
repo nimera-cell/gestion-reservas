@@ -1,0 +1,42 @@
+.contenedor {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+  background-color: #f5f5f5;
+}
+
+.disponible {
+  color: green;
+  font-weight: bold;
+}
+
+.no-disponible {
+  color: red;
+  font-weight: bold;
+}
+
+.alta-capacidad {
+  color: darkblue;
+  font-weight: bold;
+}
+
+.contador {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}

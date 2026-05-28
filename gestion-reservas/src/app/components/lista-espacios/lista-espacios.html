@@ -1,0 +1,85 @@
+<div class="container mt-4">
+
+  <h2 class="mb-3">
+    Lista de Espacios
+  </h2>
+
+  <p class="contador">
+
+    <strong>
+      Total de espacios:
+    </strong>
+
+    {{ espacios.length }}
+
+  </p>
+
+  <div class="row">
+
+    <div
+      class="col-md-4 mb-4"
+      *ngFor="let espacio of espacios"
+    >
+
+      <div class="card h-100 shadow">
+
+        <img
+          [src]="espacio.imagen"
+          [alt]="espacio.nombre"
+          class="card-img-top"
+        >
+
+        <div class="card-body">
+
+          <h5 class="card-title">
+            {{ espacio.nombre }}
+          </h5>
+
+          <p class="card-text">
+            <strong>Tipo:</strong>
+            {{ espacio.tipo }}
+          </p>
+
+          <p class="card-text">
+            <strong>Capacidad:</strong>
+            {{ espacio.capacidad }}
+          </p>
+
+          <p
+            *ngIf="espacio.capacidad >= 50"
+            class="alta-capacidad"
+          >
+            Espacio de alta capacidad
+          </p>
+
+          <p class="card-text">
+            <strong>Ubicación:</strong>
+            {{ espacio.ubicacion }}
+          </p>
+
+          <p>
+
+            <strong>Disponibilidad:</strong>
+
+            <span
+              [ngClass]="{
+                'text-success': espacio.disponible,
+                'text-danger': !espacio.disponible
+              }"
+            >
+
+              {{ espacio.disponible ? 'Disponible' : 'No disponible' }}
+
+            </span>
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

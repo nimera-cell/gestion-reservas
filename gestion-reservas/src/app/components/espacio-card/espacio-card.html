@@ -1,0 +1,25 @@
+<div class="card">
+
+  <h3>{{ espacio.nombre }}</h3>
+
+  <p><strong>Tipo:</strong> {{ espacio.tipo }}</p>
+
+  <p><strong>Capacidad:</strong> {{ espacio.capacidad }}</p>
+
+  <p>
+    <strong>Disponibilidad:</strong>
+
+    <span *ngIf="espacio.disponible">
+      Disponible
+    </span>
+
+    <span *ngIf="!espacio.disponible">
+      No disponible
+    </span>
+  </p>
+
+  <button (click)="seleccionar()">
+    Seleccionar
+  </button>
+
+</div>
